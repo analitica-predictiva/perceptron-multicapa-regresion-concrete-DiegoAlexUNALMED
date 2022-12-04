@@ -16,13 +16,13 @@ def pregunta_01():
     Carga y separación de los datos en `X` `y`
     """
     # Lea el archivo `concrete.csv` y asignelo al DataFrame `df`
-    df = pd.read_csv("https://github.com/analitica-predictiva/perceptron-multicapa-regresion-concrete-DiegoAlexUNALMED/blob/main/concrete.csv",sep =",")
+    df = pd.read_csv("https://raw.githubusercontent.com/analitica-predictiva/perceptron-multicapa-regresion-concrete-DiegoAlexUNALMED/main/concrete.csv")
 
     # Asigne la columna `strength` a la variable `y`.
     y = df.strength
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    X = df.copy(df)  
+    X = df.copy()  
 
     # Remueva la columna `strength` del DataFrame `X`.
     X = X.drop("strength", axis = 1)  
